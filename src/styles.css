@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Readex+Pro:wght@700&family=Work+Sans:ital,wght@1,300&display=swap');
+
+body{
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Readex Pro', sans-serif;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+::-webkit-scrollbar {
+ display: none;
+  }

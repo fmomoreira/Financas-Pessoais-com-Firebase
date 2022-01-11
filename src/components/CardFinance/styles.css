@@ -1,0 +1,57 @@
+.card-finance{
+  width: 100%;
+  padding: 4.5rem;
+ 
+  background-color: #FFFFFF;
+
+}
+.status{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.point-status {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius:50px;
+}
+.moneyIn{
+  background-color: #360ca1;
+}
+
+.moneyOut{
+  background-color: #360ca1;
+}
+.expense{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: flex-start;
+
+}
+
+.description-expense{
+  font-size:22px;
+  color:#303030;
+  font-weight: bold;
+}
+.date-expense{
+  font-size:16px;
+  color:#a39f9f;
+}
+
+.price-expense{
+  color: #490fbb;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.money-out{
+  color: #df0ff7
+}
+
+.money-deposit{
+  color: #490fbb;
+}
