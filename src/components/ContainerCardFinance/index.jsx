@@ -28,7 +28,7 @@ const database = firebase.firestore()
     {finances.map((finance)=>{
       return(
       <CardFinance
-        price={`R$ ${finance.price}`}//finance.price
+        price={`$ ${finance.price}`}//finance.price
         description={finance.description}//finance.description
       />
       )
