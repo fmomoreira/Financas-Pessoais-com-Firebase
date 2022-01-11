@@ -42,7 +42,7 @@ const getSumPrices = database.collection('finances')
             <span>Total Balance</span>
           </div>
           <div className="price-total-header">
-            <h1>${price}</h1>
+            <h1>${price.toFixed(2)}</h1>
           </div>
         </div>
         <div>
