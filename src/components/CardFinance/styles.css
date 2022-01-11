@@ -17,7 +17,7 @@
   height: 1.25rem;
   border-radius:50px;
 }
-.moneyIn{
+.step-expense{
   background-color: #360ca1;
 }
 
@@ -37,10 +37,6 @@
   color:#303030;
   font-weight: bold;
 }
-.date-expense{
-  font-size:16px;
-  color:#a39f9f;
-}
 
 .price-expense{
   color: #490fbb;
@@ -52,6 +48,3 @@
   color: #df0ff7
 }
 
-.money-deposit{
-  color: #490fbb;
-}

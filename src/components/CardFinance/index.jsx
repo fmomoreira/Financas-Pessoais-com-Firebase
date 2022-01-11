@@ -6,13 +6,12 @@ const CardFinance = (props) => {
     <div className="card-finance">
      <div className="row">
        <div className="col-1  status">
-        <div className={`point-status ${props.status}`}></div>
+        <div className="point-status step-expense"></div>
        </div>
        <div className="col-9  expense">
          <span className="description-expense">{props.description}</span>
-         <span className="date-expense">{props.date}</span>
        </div>
-       <div className={`col-2  price-expense ${props.typeExpense}`}>
+       <div className="col-2  price-expense money-out">
          <span>{props.price}</span>
        </div>
      </div>
