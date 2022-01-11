@@ -1,32 +1,33 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./styles.css";
 
-import firebase from '../../firebase/firebaseconfig'
+import firebase from "../../firebase/firebaseconfig";
 
 const ModalNewDespesa = () => {
- const [description, setDescription] = useState("")
-const [price, setPrice] = useState(0) 
+  const [description, setDescription] = useState("");
+  const [price, setPrice] = useState(0);
 
-  const database = firebase.firestore()
+  const database = firebase.firestore();
 
-  const clearState = () =>{
-   setDescription("")
-   setPrice(0)
+  async function adicionarNovoDocumento() {
+    database
+      .collection("finances")
+      .add({
+        description: description,
+        price: Number(price.replace(",", ".")),
+      })
+      .then(() => {
+        clearState();
+      })
+      .catch(() => {
+        console.log("deu ruim");
+      });
   }
-  async function adicionarNovoDocumento(){
 
-    database.collection('finances')
-    .add({
-    description:description,
-    price: Number(price.replace(',','.')),
-    })
-    .then(() => {
-      clearState()      
-    })
-    .catch(()=> {
-      console.log("deu ruim")
-    })
-    }
+  const clearState = () => {
+    setDescription("");
+    setPrice(0);
+  };
 
   return (
     <>
@@ -65,7 +66,9 @@ const [price, setPrice] = useState(0)
                       id="description"
                       placeholder="Supermercado"
                       value={description}
-                      onChange={(event)=>{setDescription(event.target.value)}}
+                      onChange={(event) => {
+                        setDescription(event.target.value);
+                      }}
                     />
                   </div>
                   <div className="form-group">
@@ -78,10 +81,11 @@ const [price, setPrice] = useState(0)
                       id="price"
                       placeholder="Ex: R$ 125,90"
                       value={price}
-                      onChange={(event)=>{setPrice(event.target.value)}}
+                      onChange={(event) => {
+                        setPrice(event.target.value);
+                      }}
                     />
                   </div>
-         
                 </form>
               </div>
               <div className="modal-footer">
@@ -92,10 +96,12 @@ const [price, setPrice] = useState(0)
                 >
                   Cancelar
                 </button>
-                <button type="button" className="btn btn-primary color-default"
-                onClick={()=>{
-                  adicionarNovoDocumento()
-                }}
+                <button
+                  type="button"
+                  className="btn btn-primary color-default"
+                  onClick={() => {
+                    adicionarNovoDocumento();
+                  }}
                 >
                   Adicionar
                 </button>
