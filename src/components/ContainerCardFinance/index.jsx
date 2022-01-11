@@ -1,6 +1,6 @@
 import React from 'react'
 import CardFinance from '../CardFinance'
-import styles from "./styles.css"
+import  "./styles.css"
 
 const ContainerCardsFinance = () => {
   return (

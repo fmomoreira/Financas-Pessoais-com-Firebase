@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "./styles.css"
+import "./styles.css"
 import ModalNewDespesa from "../ModalNewDespesa"
 const Header = () => {
   return (
