@@ -23,7 +23,7 @@ const modalNewDespesa = () => {
             </div>
             <div className="form-group">
               <label htmlFor="price" className="col-form-label">Valor:</label>
-              <input type="text" className="form-control" id="price" placeholder="Ex: R$ 125,90" />
+              <input type="number" className="form-control" id="price" placeholder="Ex: R$ 125,90" />
             </div>
           </form>
         </div>

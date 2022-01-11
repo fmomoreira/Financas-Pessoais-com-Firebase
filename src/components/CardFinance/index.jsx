@@ -10,9 +10,9 @@ const CardFinance = (props) => {
        </div>
        <div className="col-9  expense">
          <span className="description-expense">{props.description}</span>
-         <span className="date-expense">{props.date}</span>
+         
        </div>
-       <div className={`col-2  price-expense ${props.typeExpense}`}>
+       <div className={`col-2  price-expense money-out`}>
          <span>{props.price}</span>
        </div>
      </div>
