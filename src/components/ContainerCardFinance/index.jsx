@@ -30,8 +30,6 @@ const database = firebase.firestore()
       <CardFinance
         price={`R$ ${finance.price}`}//finance.price
         description={finance.description}//finance.description
-        date={finances.date}//finances.date
-        typeExpense={finance.typeExpense}//finance.typeExpense
       />
       )
       })}
