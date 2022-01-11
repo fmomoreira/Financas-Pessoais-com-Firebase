@@ -4,31 +4,29 @@ import styles from "./styles.css";
 import firebase from '../../firebase/firebaseconfig'
 
 const ModalNewDespesa = () => {
- const [description, setDescription] = useState(null)
+ const [description, setDescription] = useState("")
 const [price, setPrice] = useState(0) 
 
   const database = firebase.firestore()
 
-
+  const clearState = () =>{
+   setDescription("")
+   setPrice(0)
+  }
   async function adicionarNovoDocumento(){
 
     database.collection('finances')
     .add({
     description:description,
-    price: Number(price),
+    price: Number(price.replace(',','.')),
     })
     .then(() => {
-      console.log("Adicionado com sucesso")
-      
+      clearState()      
     })
     .catch(()=> {
       console.log("deu ruim")
     })
     }
-
-
-
-   
 
   return (
     <>
@@ -66,6 +64,7 @@ const [price, setPrice] = useState(0)
                       className="form-control"
                       id="description"
                       placeholder="Supermercado"
+                      value={description}
                       onChange={(event)=>{setDescription(event.target.value)}}
                     />
                   </div>
@@ -78,6 +77,7 @@ const [price, setPrice] = useState(0)
                       className="form-control"
                       id="price"
                       placeholder="Ex: R$ 125,90"
+                      value={price}
                       onChange={(event)=>{setPrice(event.target.value)}}
                     />
                   </div>
