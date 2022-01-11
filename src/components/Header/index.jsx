@@ -10,7 +10,7 @@ const Header = () => {
             <span>Total Balance</span>
           </div>
           <div className="price-total-header">
-          <h1>$3,234.00</h1>
+          <h1>$ 3234.00</h1>
           </div>
        </div>
       <div>

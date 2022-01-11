@@ -7,7 +7,7 @@ const ContainerCardsFinance = () => {
   <>
     <div className="list-cards-finance">
       <CardFinance
-        price="R$ 20.00"
+        price="$ 20.00"
         description="Abstecimento"
       />
       </div>
